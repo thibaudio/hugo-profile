@@ -1,0 +1,13 @@
+{{ if .Site.Params.heroSkills.enable | default false }}
+<section id="heroSkills" class="py-5">
+    <div class="container bg-transparent">
+        <div class="row justify-content-center px-3 px-md-5">
+            {{ range .Site.Params.heroSkills.items }}
+            <div class="col-lg-4 col-md-6 my-3">
+                <img class="rounded mx-auto d-block" src="{{ .image }}" alt="{{ .title }}" style="width: 200px;">
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
